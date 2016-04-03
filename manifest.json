@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+
+    "name": "Dark Horse downloader",
+    "description": "Dark Horse downloader",
+    "version": "1.0",
+
+    "content_scripts": [{
+        "matches": ["https://digital.darkhorse.com/library/*"],
+        "css": ["style.css"],
+        "js": ["main.js"]
+    }]
+}
