@@ -1,23 +1,23 @@
 .page-content .product-gallery .profile-buy .button {
-    bottom: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
-    right: 0px;
-    width: 94px;
+	bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+	right: 0px;
+	width: 94px;
 }
 
 .download, .download:link, .download:visited, .download:hover {
-    background: #ba2d00;
-    color: #fff;
+	background: #ba2d00;
+	color: #fff;
 	cursor: pointer;
-    display: inline-block;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    height: 43px;
-    padding-top: 9px;
-    text-align: center;
-    text-decoration: none;
-    width: 33px;
+	display: inline-block;
+	float: right;
+	font-size: 24px;
+	font-weight: bold;
+	height: 43px;
+	padding-top: 9px;
+	text-align: center;
+	text-decoration: none;
+	width: 33px;
 }
