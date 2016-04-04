@@ -5,9 +5,18 @@
 	"description": "Dark Horse downloader",
 	"version": "1.0",
 
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+
 	"content_scripts": [{
 		"matches": ["https://digital.darkhorse.com/library/*"],
 		"js": ["main.js"],
 		"css": ["style.css"]
-	}]
+	}],
+
+	"permissions": [
+		"notifications"
+	]
 }

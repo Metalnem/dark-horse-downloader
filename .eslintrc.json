@@ -1,10 +1,12 @@
 {
 	"env": {
 		"browser": true,
-		"commonjs": true,
 		"es6": true
 	},
 	"extends": "eslint:recommended",
+	"globals": {
+		"chrome": false
+	},
 	"parserOptions": {
 		"sourceType": "module"
 	},

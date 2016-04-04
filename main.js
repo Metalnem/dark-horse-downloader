@@ -26,17 +26,23 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 			}).then(response => response.text()).then(text => {
 				const idIndex = text.indexOf(idMarker);
 
-				if (idIndex !== -1) {
-					const idStart = idIndex + idMarker.length;
-					const idEnd = idStart + idLength;
-					const id = text.substring(idStart, idEnd);
-					const downloadUrl = 'https://digital.darkhorse.com/api/v6/book/' + id;
-
-					document.location = downloadUrl;
-
-					content.className = 'download';
-					content.innerHTML = '\u2B07';
+				if (idIndex === -1) {
+					throw new Error('Download link for the comic book could not be found.');
 				}
+
+				const idStart = idIndex + idMarker.length;
+				const idEnd = idStart + idLength;
+				const id = text.substring(idStart, idEnd);
+				const downloadUrl = 'https://digital.darkhorse.com/api/v6/book/' + id;
+
+				return downloadUrl;
+			}).then(downloadUrl => {
+				document.location = downloadUrl;
+			}).catch(() => {
+				chrome.runtime.sendMessage({});
+			}).then(() => {
+				content.className = 'download';
+				content.innerHTML = '\u2B07';
 			});
 		});
 	});
