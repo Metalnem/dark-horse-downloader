@@ -6,13 +6,21 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 
 	Array.prototype.forEach.call(elements, element => {
 		const readUrl = element.children[0].href;
-		const div = document.createElement('div');
 
-		div.className = 'download';
-		div.innerHTML = '\u2B07';
-		element.appendChild(div);
+		const background = document.createElement('div');
+		background.className = 'background';
 
-		div.addEventListener('click', () => {
+		const content = document.createElement('div');
+		content.className = 'download';
+		content.innerHTML = '\u2B07';
+
+		background.appendChild(content);
+		element.appendChild(background);
+
+		background.addEventListener('click', () => {
+			content.className = 'spinner';
+			content.innerHTML = null;
+
 			fetch(readUrl, {
 				credentials: 'include'
 			}).then(response => response.text()).then(text => {
@@ -25,6 +33,9 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 					const downloadUrl = 'https://digital.darkhorse.com/api/v6/book/' + id;
 
 					document.location = downloadUrl;
+
+					content.className = 'download';
+					content.innerHTML = '\u2B07';
 				}
 			});
 		});

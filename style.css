@@ -7,17 +7,38 @@
 	width: 94px;
 }
 
-.download, .download:link, .download:visited, .download:hover {
+.background {
 	background: #ba2d00;
-	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	float: right;
+	height: 52px;
+	width: 33px;
+}
+
+.download {
+	color: #fff;
+	float: right;
 	font-size: 24px;
 	font-weight: bold;
-	height: 43px;
 	padding-top: 9px;
 	text-align: center;
 	text-decoration: none;
 	width: 33px;
+}
+
+.spinner {
+	animation: rotate 0.8s infinite linear;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	border-right-color: transparent;
+	margin-left: 4px;
+	margin-top: 13px;
+	height: 17px;
+	width: 17px;
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
