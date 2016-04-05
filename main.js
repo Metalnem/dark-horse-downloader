@@ -12,7 +12,6 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 
 		const content = document.createElement('div');
 		content.className = 'download';
-		content.innerHTML = '\u2B07';
 
 		background.appendChild(content);
 		element.appendChild(background);
@@ -46,7 +45,6 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 				});
 			}).then(() => {
 				content.className = 'download';
-				content.innerHTML = '\u2B07';
 			});
 		});
 	});
