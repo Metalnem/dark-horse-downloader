@@ -37,9 +37,13 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 
 				return downloadUrl;
 			}).then(downloadUrl => {
-				document.location = downloadUrl;
-			}).catch(() => {
-				chrome.runtime.sendMessage({});
+				chrome.runtime.sendMessage({
+					downloadUrl: downloadUrl
+				});
+			}).catch(error => {
+				chrome.runtime.sendMessage({
+					error: error.message
+				});
 			}).then(() => {
 				content.className = 'download';
 				content.innerHTML = '\u2B07';

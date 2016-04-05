@@ -17,6 +17,7 @@
 	}],
 
 	"permissions": [
+		"downloads",
 		"notifications"
 	]
 }
