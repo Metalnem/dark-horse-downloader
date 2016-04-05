@@ -1,30 +1,30 @@
 .page-content .product-gallery .profile-buy .button {
-	bottom: 0px;
+	bottom: 0;
 	padding-left: 5px;
 	padding-right: 5px;
 	position: relative;
-	right: 0px;
+	right: 0;
 	width: 94px;
 }
 
 .background {
 	background: #ba2d00;
 	cursor: pointer;
-	display: inline-block;
 	float: right;
 	height: 52px;
 	width: 33px;
 }
 
 .download {
-	color: #fff;
-	float: right;
-	font-size: 24px;
-	font-weight: bold;
-	padding-top: 9px;
-	text-align: center;
-	text-decoration: none;
-	width: 33px;
+	margin-top: 19px;
+	margin-left: 8px;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 16px solid #fff;
+	font-size: 0;
+	line-height: 0;
 }
 
 .spinner {
