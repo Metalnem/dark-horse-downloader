@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 
 	"name": "Dark Horse downloader",
-	"description": "Dark Horse downloader",
+	"description": "Download Dark Horse comic books directly from your digital library web page",
 	"version": "1.0",
 
 	"background": {
