@@ -1,6 +1,6 @@
 # Dark Horse downloader
 
-This Chrome extension gives you the option to download digital Dark Horse comic books from your [library](https://digital.darkhorse.com/library/?display_mode=gallery).
+This Chrome extension gives you the option to download digital Dark Horse comic books from your digital [library](https://digital.darkhorse.com/library/?display_mode=gallery). You can download it [here](https://chrome.google.com/webstore/detail/dark-horse-downloader/odciinkioeagogcogbpelccibomlenhl).
 
 ## Usage
 
