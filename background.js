@@ -24,6 +24,14 @@ function handleError(error) {
 	chrome.notifications.create(null, options);
 }
 
+function sanitize(fileName) {
+	return fileName
+		.replace(/[<>*?]/g, '')
+		.replace(/[/\\|]/g, '-')
+		.replace('"', '\'')
+		.replace(':', ' -');
+}
+
 function getFileName(title) {
-	return title + '.tar';
+	return sanitize(title) + '.tar';
 }
