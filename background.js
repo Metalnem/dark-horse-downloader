@@ -1,14 +1,15 @@
 chrome.runtime.onMessage.addListener(message => {
 	if (message.downloadUrl) {
-		handleDownload(message.downloadUrl);
+		handleDownload(message.downloadUrl, message.title);
 	} else if (message.error) {
 		handleError(message.error);
 	}
 });
 
-function handleDownload(downloadUrl) {
+function handleDownload(downloadUrl, title) {
 	chrome.downloads.download({
-		url: downloadUrl
+		url: downloadUrl,
+		filename: getFileName(title)
 	});
 }
 
@@ -21,4 +22,8 @@ function handleError(error) {
 	};
 
 	chrome.notifications.create(null, options);
+}
+
+function getFileName(title) {
+	return title + '.tar';
 }

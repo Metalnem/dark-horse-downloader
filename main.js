@@ -1,10 +1,19 @@
 const idMarker = '/api/v/books/details/';
 const idLength = 32;
 
+function previousElement(node) {
+	do {
+		node = node.previousSibling;
+	} while (node && node.nodeType !== Node.ELEMENT_NODE);
+
+	return node;
+}
+
 if (document.getElementsByClassName('product-gallery').length > 0) {
 	const elements = document.getElementsByClassName('profile-buy');
 
 	Array.prototype.forEach.call(elements, element => {
+		const title = previousElement(element).title;
 		const readUrl = element.children[0].href;
 
 		const background = document.createElement('div');
@@ -37,7 +46,8 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 				return downloadUrl;
 			}).then(downloadUrl => {
 				chrome.runtime.sendMessage({
-					downloadUrl: downloadUrl
+					downloadUrl: downloadUrl,
+					title: title
 				});
 			}).catch(error => {
 				chrome.runtime.sendMessage({
