@@ -1,4 +1,4 @@
-# Dark Horse downloader
+# Dark Horse downloader [![Code Climate](https://codeclimate.com/github/Metalnem/dark-horse-downloader/badges/gpa.svg)](https://codeclimate.com/github/Metalnem/dark-horse-downloader) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/metalnem/dark-horse-downloader/master/LICENSE)
 
 This Chrome extension gives you the option to download digital Dark Horse comic books from your digital [library](https://digital.darkhorse.com/library/?display_mode=gallery). You can download it [here](https://chrome.google.com/webstore/detail/dark-horse-downloader/odciinkioeagogcogbpelccibomlenhl).
 
