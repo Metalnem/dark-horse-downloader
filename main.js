@@ -31,7 +31,13 @@ if (document.getElementsByClassName('product-gallery').length > 0) {
 
 			fetch(readUrl, {
 				credentials: 'include'
-			}).then(response => response.text()).then(text => {
+			}).then(response => {
+				if (response.ok) {
+					return response.text();
+				} else {
+					throw new Error('Failed to open the comic book page.');
+				}
+			}).then(text => {
 				const idIndex = text.indexOf(idMarker);
 
 				if (idIndex === -1) {
